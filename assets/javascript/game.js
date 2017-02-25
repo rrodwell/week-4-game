@@ -14,7 +14,7 @@ var isEnemy = false;
 
 //object for divs
 var characterDiv = {
-	luke: '<div class="characters" id= "lukeSkywalker" style="border: 3px solid #00cc02" >' + 
+	luke: '<div class="characters" id= "lukeSkywalker" style="border: 3px solid #00cc02">' + 
 			'<h4>Luke Skywalker</h4>' + 
 			'<img src="assets/images/luke.png" width="160" height="130">' +
 			'<p id="lukeHealth">120</p>' + '</div>',
@@ -46,6 +46,9 @@ $(document).ready(function() {
 
 	//change color and to enemy
 function enemyColor(){
+	$(this).css("background-color", "red");
+	$(this).css("border", "0px");
+	//console.log(this);
 
 };
 	//change color and move to defender
@@ -62,6 +65,8 @@ function defenderColor(){
 
 	//attack button
 function attackFunction(){
+	attackPower = attackPower + 8
+
 
 };
 
@@ -70,29 +75,37 @@ function resetFunction(){
 	//reset variables to zero 
 	numberClicks =0;
 	attackPower = 8;
-	enemyAttackPower = 25;
 	lukeHealthRemaining = 120;
 	yodaHealthRemaining = 100;
 	vaderHealthRemaining = 180;
 	bobaHealthReaming = 150;
 	//move characters back to starting position
+	$(".characterSection").empty();
 	for (var i = 0; i < characterList.length; i++) {
 		$(".characterSection").append(characterList[i]);
 	};
-	$(".enemiesToAttack").html("<div class='enemiesToAttack'></div>");
+	$(".enemiesToAttack").empty();
 };
 
 
+//skywalker.addEventListener('click', reply_click, false);
 
+
+
+var numberClicks = 0;
 //On Click
 $("#lukeSkywalker").on("click", function(){
-	var numberClicks = 0
-	if 
-
-	$("#lukeSkywalker").appendTo(".enemiesToAttack");
+	numberClicks++;
+	$(this).css("background-color", "red");
+	$(this).css("border", "2px solid black");
+	$(this).css("color","black");
+	$(this).appendTo(".enemiesToAttack");
 
 });
 
+
+
+/*
 $("#yoda").on("click", function(){
 
 });
@@ -108,10 +121,9 @@ $("#bobaFett").on("click", function(){
 $(".attackButton").on("click", function(){
 
 });
-
+*/
 $(".resetButton").on("click", function(){
 	resetFunction();
-
 });
 
 });
