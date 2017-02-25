@@ -22,47 +22,35 @@
 			</div>
 		</div>
 		<div class="container characterPick">
-			<h3>Your Character :</h3>
+			<h3>Pick Your Character :</h3>
 			<div class="characterSection">
-				<div class="characters characterOne" style="border: 3px solid #00cc02">
-					<h4>Luke Skywalker</h4>
-					<img src="assets/images/luke.png" width="160" height="130">
-					<p class="health">120</p>
-				</div>
-				<div class="characters characterTwo" style="border: 3px solid #00cc02">
-					<h4>Yoda</h4>
-					<img src="assets/images/yoda.png" width="160" height="130">
-					<p class="health">100</p>
-				</div>
-				<div class="characters characterThree" style="border: 3px solid #00cc02">
-					<h4>Darth Vader</h4>
-					<img src="assets/images/darthvader.png" width="160" height="130">
-					<p class="health">180</p>
-				</div>
-				<div class="characters characterFour" style="border: 3px solid #00cc02">
-					<h4>Boba Fett</h4>
-					<img src="assets/images/bobafett.png" width="160" height="130">
-					<p class="health">150</p>
-				</div>
 			</div>
+		</div>
+		<div class="container">
 			<div class="enemies">
 				<h3>Enemies Available To Attack :</h3>
 				<div class="enemiesToAttack">
 				</div>
-				<div class="fight">
-					<h3>Fight Section :</h3>
-					<button type="button" class="btn btn-lg btn-primary attackButton" onclick="attack()">Attack</button>
-					<h3>Defender :</h3>
-				</div>
-				<div class="defender">
-				</div>
-				<div class="attackPower">
-					<p class="yourAttack"></p>
-					<p class="defendersAttack"></p>
-				</div>
 			</div>
 		</div>
-		<!-- JavaScript -->
-		<script type="text/javascript" src="assets/javascript/game.js"></script>
-	</body>
+		<div class="container">
+			<div class="fight">
+				<h3>Fight Section :</h3>
+				<button type="button" class="btn btn-lg btn-primary attackButton">Attack</button>
+			</div>
+		</div>
+		<div class="container">
+			<h3>Defender :</h3>
+			<div class="defender">
+			</div>
+			<div class="attackPower">
+				<p class="yourAttack"></p>
+				<p class="defendersAttack"></p>
+			</div>
+			<button type="button" class="btn btn-lg btn-default restButton">Reset</button>
+		</div>
+	</div>
+	<!-- JavaScript -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
 </html>
