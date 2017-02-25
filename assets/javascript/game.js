@@ -44,12 +44,10 @@ $(document).ready(function() {
 	
 //Functions 
 
-	//change color and to enemy
-
 	//change color and move to defender
 
 	//when game is won
-		//show reset button
+		//show reset button, visibile currently to test functionality
 
 	//when game is lost
 		//show rest button
@@ -58,6 +56,9 @@ $(document).ready(function() {
 	//attack button
 function attackFunction(){
 	attackPower = attackPower + 8
+	//UNFINISHED
+		//need to track health scores, 
+		//subtract counter attacks
 
 
 };
@@ -77,14 +78,13 @@ function resetFunction(){
 		$(".characterSection").append(characterList[i]);
 	};
 	$(".enemiesToAttack").empty();
+	//need to include ability to reclick characters
 };
 
 
-//skywalker.addEventListener('click', reply_click, false);
-
-
-
-var numberClicks = 0;
+//Got stuck on how to track which ID was clicked to move remaining to enemmies 
+	//need to count clicks to determine who to fight first
+ numberClicks = 0;
 //On Click
 $("#lukeSkywalker").on("click", function(){
 	numberClicks++;
@@ -96,24 +96,42 @@ $("#lukeSkywalker").on("click", function(){
 });
 
 
-
-/*
 $("#yoda").on("click", function(){
+	numberClicks++;
+	$(this).css("background-color", "red");
+	$(this).css("border", "2px solid black");
+	$(this).css("color","black");
+	$(this).appendTo(".enemiesToAttack");
 
 });
 
 $("#darthVader").on("click", function(){
+	numberClicks++;
+	$(this).css("background-color", "red");
+	$(this).css("border", "2px solid black");
+	$(this).css("color","black");
+	$(this).appendTo(".enemiesToAttack");
 
 });
 
 $("#bobaFett").on("click", function(){
+	numberClicks++;
+	$(this).css("background-color", "red");
+	$(this).css("border", "2px solid black");
+	$(this).css("color","black");
+	$(this).appendTo(".enemiesToAttack");
 
 });
 
 $(".attackButton").on("click", function(){
+	numberClicks++;
+	$(this).css("background-color", "red");
+	$(this).css("border", "2px solid black");
+	$(this).css("color","black");
+	$(this).appendTo(".enemiesToAttack");
 
 });
-*/
+
 $(".resetButton").on("click", function(){
 	resetFunction();
 });
