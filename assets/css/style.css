@@ -1,0 +1,26 @@
+body{
+	background-color: black;
+}
+
+.jumbotron img{
+	width: 960px;
+	height: 500px;
+}
+
+.jumbotron h1{
+	text-align: center
+}
+.container h3{
+	color: #cccccc;
+	margin-bottom: 20px;
+}
+
+.characters{
+	float: left;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	color: #777777;	
+	margin: 10px;
+	background-color: white;
+}
