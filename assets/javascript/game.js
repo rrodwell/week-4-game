@@ -44,7 +44,17 @@ $(document).ready(function() {
 	
 //Functions 
 
+	//change color and move to enemy 
+function enemy(){
+	$(".characters").not(this)
+		.appendTo(".enemiesToAttack")
+		.css("background-color", "red")
+		.css("border", "2px solid black")
+		.css("color","black");
+}
 	//change color and move to defender
+
+}
 
 	//when game is won
 		//show reset button, visibile currently to test functionality
@@ -86,51 +96,14 @@ function resetFunction(){
 	//need to count clicks to determine who to fight first
  numberClicks = 0;
 //On Click
-$("#lukeSkywalker").on("click", function(){
-	numberClicks++;
-	$(this).css("background-color", "red");
-	$(this).css("border", "2px solid black");
-	$(this).css("color","black");
-	$(this).appendTo(".enemiesToAttack");
+$(document).on("click", "#lukeSkywalker", enemy);
 
-});
+$(document).on("click", "#yoda", enemy);
 
+$(document).on("click", "#darthVader", enemy);
 
-$("#yoda").on("click", function(){
-	numberClicks++;
-	$(this).css("background-color", "red");
-	$(this).css("border", "2px solid black");
-	$(this).css("color","black");
-	$(this).appendTo(".enemiesToAttack");
+$(document).on("click", "#bobaFett", enemy);
 
-});
-
-$("#darthVader").on("click", function(){
-	numberClicks++;
-	$(this).css("background-color", "red");
-	$(this).css("border", "2px solid black");
-	$(this).css("color","black");
-	$(this).appendTo(".enemiesToAttack");
-
-});
-
-$("#bobaFett").on("click", function(){
-	numberClicks++;
-	$(this).css("background-color", "red");
-	$(this).css("border", "2px solid black");
-	$(this).css("color","black");
-	$(this).appendTo(".enemiesToAttack");
-
-});
-
-$(".attackButton").on("click", function(){
-	numberClicks++;
-	$(this).css("background-color", "red");
-	$(this).css("border", "2px solid black");
-	$(this).css("color","black");
-	$(this).appendTo(".enemiesToAttack");
-
-});
 
 $(".resetButton").on("click", function(){
 	resetFunction();
