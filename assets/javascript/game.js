@@ -45,16 +45,8 @@ $(document).ready(function() {
 //Functions 
 
 	//change color and to enemy
-function enemyColor(){
-	$(this).css("background-color", "red");
-	$(this).css("border", "0px");
-	//console.log(this);
 
-};
 	//change color and move to defender
-function defenderColor(){
-
-};
 
 	//when game is won
 		//show reset button
