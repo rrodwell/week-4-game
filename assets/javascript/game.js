@@ -48,9 +48,11 @@ function determineChar(){
 	if (numberClicks === 0){
 		enemy();
 		numberClicks++;
+		console.log(numberClicks);
 	} else {
 		defender();
 		numberClicks++;
+		console.log(numberClicks);
 	}
 }
 
@@ -106,13 +108,13 @@ function resetFunction(){
 	//need to count clicks to determine who to fight first
  numberClicks = 0;
 //On Click
-$(document).on("click", "#lukeSkywalker", enemy);
+$(document).on("click", "#lukeSkywalker", determineChar);
 
-$(document).on("click", "#yoda", enemy);
+$(document).on("click", "#yoda", determineChar);
 
-$(document).on("click", "#darthVader", enemy);
+$(document).on("click", "#darthVader", determineChar);
 
-$(document).on("click", "#bobaFett", enemy);
+$(document).on("click", "#bobaFett", determineChar);
 
 
 $(".resetButton").on("click", function(){
