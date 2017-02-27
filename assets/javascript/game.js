@@ -43,6 +43,16 @@ $(document).ready(function() {
 	}
 	
 //Functions 
+numberClicks = 0
+function determineChar(){
+	if (numberClicks === 0){
+		enemy();
+		numberClicks++;
+	} else {
+		defender();
+		numberClicks++;
+	}
+}
 
 	//change color and move to enemy 
 function enemy(){
@@ -54,7 +64,7 @@ function enemy(){
 }
 	//change color and move to defender
 
-}
+
 
 	//when game is won
 		//show reset button, visibile currently to test functionality
